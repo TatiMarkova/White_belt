@@ -15,22 +15,23 @@
  *   comfort  *
  *   coffee   *
  *   car      *
+ *   coffffee *
  **************/
 
 int main(int argv, char* argc[]) {
     std::string str;
     std::cin >> str;
-    int num = count(str.begin(), str.end(), 'f');
-
-    if (num > 1) {
-        std::cout << str.find_last_of('f') << '\n';
-    }
-    else if (num == 1) {
-        std::cout << -1 << '\n';
-    }
-    else (num == 0) {
-        std::cout << -2 << '\n';
-    }
+    
+    int num = 0;
+    for(int i = 0; i < str.size(); i++) {
+        if (str[i] == 'f') num++;
+        if (num == 2) {
+            std::cout << i << '\n';
+            break;
+        }
+    } 
+    if (num == 0) std::cout << -2 << '\n';
+    else if (num == 1) std::cout << -1 << '\n';
 
     return EXIT_SUCCESS;
 }
@@ -40,4 +41,5 @@ int main(int argv, char* argc[]) {
  *   -1     *
  *   3      *
  *   -2     *
+ *   3      *
  ************/
