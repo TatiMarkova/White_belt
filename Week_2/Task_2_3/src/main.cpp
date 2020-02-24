@@ -25,12 +25,12 @@ bool IsPalindrom(const std::string& str) {
 
 std::vector<std::string> PalindromFilter(const std::vector<std::string>& words, 
                                     const int& minLength) {
-    std::vector<std::string> upd;
+    std::vector<std::string> res;
     for(const auto& str : words) {
         if (IsPalindrom(str) && str.size() >= minLength) 
-            upd.push_back(str);
+            res.push_back(str);
     }
-    return upd;
+    return res;
 }
 
 void Test() {
