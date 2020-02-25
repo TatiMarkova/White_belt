@@ -30,10 +30,10 @@
  *******************/
 
 int main(int argv, char* argc[]) {
-    int queue_size;
-    std::cin >> queue_size;
+    int q_count;
+    std::cin >> q_count;
     std::vector<bool> is_quiet; 
-    for (queue_size; queue_size > 0; --queue_size) {
+    for (q_count; q_count > 0; --q_count) {
         std::string action = "";
         std::cin >> action;
         if (action == "WORRY_COUNT") {
