@@ -21,13 +21,13 @@ int main(int argv, char* argc[]) {
     int n;
     std::cin >> n;
     std::vector<int> nums(n);
-    for (int& i : nums) {
+    for (auto& i : nums) {
         std::cin >> i;
     }
     sort(begin(nums), end(nums), [](const auto& l, const auto& r) {
         return std::abs(l) < std::abs(r);
     });
-    for (int& i : nums) {
+    for (const auto& i : nums) {
         std::cout << i << ' ';
     }
     std::cout << '\n';
