@@ -25,10 +25,19 @@ using std::cout;
 
 int main(int argv, char* argc[]) {
     std::ifstream input("input.txt");
-    string line;
+    string line = "";
+    double num = 0.0;
+
     if (input) {
-        while (getline(input, line)) {
+        //var 1
+        /*while (getline(input, line)) {
             double num = stod(line);
+            cout << std::fixed << std::setprecision(3);
+            cout << num << '\n';
+        }*/
+
+        //var 2
+        while (getline(input >> num)) {
             cout << std::fixed << std::setprecision(3);
             cout << num << '\n';
         }
