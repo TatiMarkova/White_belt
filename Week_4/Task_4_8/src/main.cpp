@@ -87,14 +87,13 @@ ostream& operator<<(ostream& stream, const Rational& r) {
 }
 
 istream& operator>>(istream& stream, Rational& r) {
-    if (stream.tellg() == -1) {
-        return stream;
-    } 
     int n, d;
-    stream >> n;
-    stream.ignore(1);
-    stream >> d;
-    r = Rational {n, d};
+    if (stream.good()) {
+        stream >> n;
+        stream.ignore(1);
+        stream >> d;
+        r = Rational {n, d};
+    } 
     return stream;
 }
 
