@@ -3,6 +3,7 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 1_7                *
+ * "Second entry"           *
  ****************************/
 
 #include <iostream>
@@ -10,20 +11,20 @@
 #include <string>
 #include <algorithm>
 
-/**************
- * Input:     *
- *   comfort  *
- *   coffee   *
- *   car      *
- *   coffffee *
- **************/
+/***************
+ * Input:      *
+ *   comfort   *
+ *   coffee    *
+ *   car       *
+ *   coffffee  *
+ ***************/
 
 int main(int argv, char* argc[]) {
     std::string str;
     std::cin >> str;
     
     int num = 0;
-    for(int i = 0; i < str.size(); i++) {
+    for(int i = 0; i < str.size(); ++i) {
         if (str[i] == 'f') num++;
         if (num == 2) {
             std::cout << i << '\n';
@@ -39,7 +40,7 @@ int main(int argv, char* argc[]) {
 /************
  * Output:  *
  *   -1     *
- *   3      *
+ *    3     *
  *   -2     *
- *   3      *
+ *    3     *
  ************/
