@@ -3,6 +3,7 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 1_4                *
+ * "Division"               *
  ****************************/
 
 #include <iostream>

@@ -1,0 +1,3 @@
+/home/tati/Coursera/White_belt/Week_2/Task_2_10/build/CMakeFiles/rebuild_cache.dir
+/home/tati/Coursera/White_belt/Week_2/Task_2_10/build/CMakeFiles/Task_2_10.dir
+/home/tati/Coursera/White_belt/Week_2/Task_2_10/build/CMakeFiles/edit_cache.dir
