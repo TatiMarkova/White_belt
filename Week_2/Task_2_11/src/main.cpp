@@ -13,7 +13,7 @@
 
 /**********************
  * Input:             *
- *   6                *
+ *   3                *
  *   eat  tea         *
  *   find  search     *
  *   master  stream   *

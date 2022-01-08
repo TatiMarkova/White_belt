@@ -1,10 +1,9 @@
-/*******************************
- * Coursera                    *
- * White belt                  *
- * @autor: Tatiana Markova     *
- * task: 1_8                   *
- * "Greatest common divisor"   *
- *******************************/
+/****************************
+ * Coursera                 *
+ * White belt               *
+ * @autor: Tatiana Markova  *
+ * task: 1_8                *
+ ****************************/
 
 #include <iostream>
 #include <cstdlib>
@@ -21,8 +20,9 @@
 int main(int argv, char* argc[]) {
     int a, b;
     std::cin >> a >> b;
-    // Euclid's Algorithm
-    while (a % b) std::swap(a %= b, b);
+    
+    while (a % b) 
+        std::swap(a %= b, b);
     std::cout << b << '\n';
 
     return EXIT_SUCCESS;

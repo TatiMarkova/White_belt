@@ -2,7 +2,7 @@
  * Coursera                 *
  * White belt               *
  * @autor: Tatiana Markova  *
- * task: 4_11               *
+ * task: 4_11                *
  ****************************/
 
 #include <iostream>

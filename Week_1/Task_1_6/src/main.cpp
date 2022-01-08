@@ -3,7 +3,6 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 1_6                *
- * "Even numbers"           *
  ****************************/
 
 #include <iostream>
@@ -20,7 +19,7 @@ int main(int argv, char* argc[]) {
     int a, b;
     std::cin >> a >> b;
     
-    for(a; a <= b; ++a) {
+    for(a; a <= b; a++) {
         if (a % 2 == 0)
             std::cout << a << ' ';
     }

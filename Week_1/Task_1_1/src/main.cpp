@@ -1,10 +1,9 @@
-/******************************
- * Coursera                   *
- * White belt                 *
- * @autor: Tatiana Markova    *
- * task: 1_1                  *
- * "A + B"                    *
- ******************************/
+/****************************
+ * Coursera                 *
+ * White belt               *
+ * @autor: Tatiana Markova  *
+ * task: 1_1                *
+ ****************************/
 
 #include <iostream>
 #include <cstdlib>
@@ -12,8 +11,8 @@
 /************
  * Input:   *
  *   2   3  *
- *  -4  -9  *
- *  -1   2  *
+ *   -4  -9 *
+ *   -1  2  *
  ************/
 
 int main(int argv, char* argc[]) {
@@ -26,7 +25,7 @@ int main(int argv, char* argc[]) {
 
 /************
  * Output:  *
- *    5     *
+ *   5      *
  *   -13    *
- *    1     *
+ *   1      *
  ************/

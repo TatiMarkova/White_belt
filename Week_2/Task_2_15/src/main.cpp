@@ -32,6 +32,7 @@ int main(int argv, char* argc[]) {
     }
     std::cout << s.size() << '\n';
     
+
     return EXIT_SUCCESS;
 }
 
