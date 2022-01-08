@@ -3,6 +3,7 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 1_2                *
+ * "Minimal string"         *
  ****************************/
 
 #include <iostream>
@@ -20,7 +21,7 @@
 int main(int argv, char* argc[]) {
     std::string a, b, c;
     std::cin >> a >> b >> c;
-    std::cout << std::min(a, std::min(b, c)) << '\n';
+    std::cout << std::min(a, std::min(b, c)) << std::endl;
 
     return EXIT_SUCCESS;
 }

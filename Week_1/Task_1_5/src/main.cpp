@@ -1,9 +1,10 @@
-/****************************
- * Coursera                 *
- * White belt               *
- * @autor: Tatiana Markova  *
- * task: 1_5                *
- ****************************/
+/*************************************
+ * Coursera                          *
+ * White belt                        *
+ * @autor: Tatiana Markova           *
+ * task: 1_5                         *
+ * "Calculating the cost of goods"   *
+ *************************************/
 
 #include <iostream>
 #include <cstdlib>
@@ -21,21 +22,21 @@ int main(int argv, char* argc[]) {
     std::cin >> N >> A >> B >> X >> Y;
     
     //version_1
-    /*if (N > B)  
+    if (N > B)  
         std::cout << N - (N / 100 * Y) << '\n';
     else if (N > A) 
         std::cout << N - (N / 100 * X) << '\n';
     else 
         std::cout << N << '\n';
-    */
+    
 
     //version_2
-    if (N > B)  
+    /*if (N > B)  
         N -= N / 100 * Y;
     else if (N > A) 
         N -= N / 100 * X;
    
-    std::cout << N << '\n';
+    std::cout << N << '\n';*/
 
 
     return EXIT_SUCCESS;
