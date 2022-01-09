@@ -3,10 +3,10 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 2_4                *
+ * "Maximizer"              *
  ****************************/
 
 #include <iostream>
-#include <cstdlib>
 
 /*************
  * Input:    *
@@ -14,18 +14,19 @@
  *   b = 3   *
  *************/
 
-void UpdateGreater(const int& first, int& second) {
-    if (first > second) second = first;
+void UpdateIfGreater(int first, int& second) {
+    if (first > second) 
+        second = first;
 }
 
 void Test() {
     int a = 5, b = 3;
-    UpdateGreater(a, b);
+    UpdateIfGreater(a, b);
     std::cout << b << '\n';
 }
 
 int main(int argv, char* argc[]) {
-    Test();
+    //Test();
 
     return EXIT_SUCCESS;
 }

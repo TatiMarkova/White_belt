@@ -3,12 +3,11 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 2_9                *
+ * "Queue"                  *
  ****************************/
 
 #include <iostream>
-#include <cstdlib>
 #include <vector>
-#include <string>
 #include <algorithm>
 
 /*******************
@@ -30,28 +29,29 @@
  *******************/
 
 int main(int argv, char* argc[]) {
-    int q_count;
-    std::cin >> q_count;
-    std::vector<bool> is_quiet; 
-    for (q_count; q_count > 0; --q_count) {
-        std::string action = "";
+    int Q;
+    std::string action;
+    std::cin >> Q;
+    std::vector<bool> is_quiet;
+
+    for (Q; Q > 0; --Q) {
         std::cin >> action;
         if (action == "WORRY_COUNT") {
-            std::cout << count(is_quiet.begin(), is_quiet.end(), false) << '\n';
-            continue;
+            std::cout << count(is_quiet.begin(), is_quiet.end(), false) << std::endl;
         }
-        int index;
-        std::cin >> index;
-        if (action == "COME") {
-            (index > 0) ?
-                is_quiet.resize(is_quiet.size() + index, true) : 
-                is_quiet.resize(is_quiet.size() + index); 
+        else if (action == "COME") {
+            int i;
+            std::cin >> i;
+                (i >= 0) ? is_quiet.resize(is_quiet.size() + i, true)
+                         : is_quiet.resize(is_quiet.size() + i);
         }
         else {
-            (action == "WORRY") ? 
-                is_quiet[index] = false : is_quiet[index] = true;
-        }   
+            int i;
+            std::cin >> i;
+            is_quiet[i] = (action == "QUIET");
+        } 
     }
+
     return EXIT_SUCCESS;
 }
 

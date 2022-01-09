@@ -3,10 +3,10 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 2_8                *
+ * "Average temperature"    *
  ****************************/
 
 #include <iostream>
-#include <cstdlib>
 #include <vector>
 
 /********************
@@ -16,25 +16,25 @@
  ********************/
 
 int main(int argv, char* argc[]) {
-    int n, t, sum;
+    int n, sum = 0;
     std::cin >> n;
-    std::vector<unsigned int> temp(n);
-    for (auto& t : temp) {
+    std::vector<unsigned int> temperature(n);
+    for (auto& t : temperature) {
         std::cin >> t;
         sum += t;
     }
     unsigned int average = sum / n;
 
     std::vector<int> indexes;
-    for (int i = 0; i < temp.size(); i++) {
-        if (temp[i] > average)
+    for (int i = 0; i < temperature.size(); ++i) {
+        if (temperature[i] > average)
             indexes.push_back(i);
     }
-    std::cout << indexes.size() << '\n';
+    std::cout << indexes.size() << std::endl;
     for (const auto& i : indexes)  {
         std::cout << i << ' ';
     }
-    std::cout << '\n';
+    std::cout << std::endl;
     return EXIT_SUCCESS;
 }
 

@@ -3,6 +3,7 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 2_1                *
+ * "Factorial"              *
  ****************************/
 
 #include <iostream>
@@ -11,12 +12,13 @@
 
 /************
  * Input:   *
- *   1      *
+ *    1     *
  *   -2     *
- *   4      *
+ *    4     *
  ************/
 
-int Factorial(int a) {
+// Version 1
+/*int Factorial(int a) {
     int fact = 1;
     if (a <= 0) return 1;
     else {
@@ -25,6 +27,28 @@ int Factorial(int a) {
         }
         return fact;
     }
+}*/
+
+// Version 2
+/*int Factorial(int a) {
+    int result = 1;
+    for (int i = 2; i <= a; ++i) {
+        result *= i;
+    }
+    return result;
+}*/
+
+// Version 3 - recursion
+/*int Factorial(int a) {
+    if (a <= 1) return 1;
+    else { 
+        return a * Factorial(a - 1);
+    }
+}*/
+
+// Version 4 - recursion
+int Factorial(int a) {
+    return (a <= 1) ? 1 : a * Factorial(a - 1);
 }
 
 int main(int argv, char* argc[]) {
@@ -37,7 +61,7 @@ int main(int argv, char* argc[]) {
 
 /*************
  * Output:   *
- *   1       *
- *   1       *
- *   24      *
+ *    1      *
+ *    1      *
+ *    24     *
  *************/

@@ -3,6 +3,7 @@
  * White belt               *
  * @autor: Tatiana Markova  *
  * task: 2_3                *
+ * "Palindromes filter"     *
  ****************************/
 
 #include <iostream>
@@ -11,6 +12,9 @@
 #include <vector>
 
 /**************************
+ * No more than 100 lines *
+ * no more than 100 char. *
+ *                        *
  * Input:                 *
  *   abacaba, aba, 5      *
  *   abacaba, aba, 2      *
@@ -18,19 +22,22 @@
  **************************/
 
 bool IsPalindrom(const std::string& str) {
-    for (int i = 0; i < str.size() / 2; i++)
-        if (str[i] != str[str.size()- 1 - i]) return false;
+    for (int i = 0; i < str.size() / 2; ++i) {
+        if (str[i] != str[str.size()- 1 - i]) 
+            return false;
+    }
     return true;
 }
 
-std::vector<std::string> PalindromFilter(const std::vector<std::string>& words, 
-                                    const int& minLength) {
-    std::vector<std::string> res;
+std::vector<std::string> PalindromFilter(
+                        const std::vector<std::string>& words, 
+                        const int& minLength) {
+    std::vector<std::string> result;
     for(const auto& str : words) {
         if (IsPalindrom(str) && str.size() >= minLength) 
-            res.push_back(str);
+            result.push_back(str);
     }
-    return res;
+    return result;
 }
 
 void Test() {
@@ -47,7 +54,7 @@ void Test() {
 }
 
 int main(int argv, char* argc[]) {
-    Test();
+    //Test();
     return EXIT_SUCCESS;
 }
 
